@@ -1,0 +1,14 @@
+first about interceptor -> def
+creatin custom interceptor and adding it to mvc . and then invoking it
+->about pre , post and after methods
+->above one is before reaching to specififc controller class (this one is CustonInterceptor class)
+----------------------
+->@Target -> this meta annotation tells where we can apply particular or custom annotaion on method
+or class or contructor
+-> we can create our own annotation by
+@Target({ElementType.METHOD , ElementType.CLASS })
+public @interface annotation_name{}
+->and use it by @annotation_name
+->another way to create custom intercpetor is by using our own annotatoin and aop and around advice fromaop
+->first create custom annotation and annotate the method which we want to intercept
+->and bby using aop and @annotaion write a pointcut and write code inside the around

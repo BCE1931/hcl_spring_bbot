@@ -1,0 +1,16 @@
+->to enable async write @EnableAsync in main class . so spring will create beans for sync classes
+->just annotate method with @async- to enable asynchronous execution for that method
+->Thread.currentThread.getName() -> will display exact thread name
+->ThreadPollTaskExecutor(sprinf) is an wrapper class for ThreadPoolExecutor(plain java )
+->
+
+->disadvantages of defaultExecutor is more memory usage , thread exhaustion , max latency , underutilization of threads
+->to overcome this we need to create our own threadpooltaskexecutor. other wise spring chooses above default executor
+->by using threadpooltaskexecutor we can set thread name , max aue size , min threads , maxcore threads .
+->we can create our own threadpoolexecutor instead of threadpooltaskexecutor
+->if we create threadpoolexecutor  on our own then java use our executor instead of threadpooltaskexecutor
+->the method which is annotated with async must be public because aop is involved
+->we cant annotate the same method  with both async and transactional.
+->if we want transactional , async thn call async method from main class and call transactional method for async method .
+->if any error happened then transaction can roll back and also we can maintain asynchronization
+->
