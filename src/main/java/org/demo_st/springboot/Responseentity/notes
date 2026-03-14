@@ -1,0 +1,9 @@
+->status and then headers and then body
+->if there is no body  then use build() instead of body
+return ResponseEntity.status(HttpStatus.ok).headers(headers).body("msg");
+->1xx for informational
+2xx for success (220 - > success , 201 -> created , 202 -> accepted , 204 -> no content , 206 -> partially accept)
+3xx for redirection (
+4xx for validation error
+5xx for server error
+status codes are in docs
