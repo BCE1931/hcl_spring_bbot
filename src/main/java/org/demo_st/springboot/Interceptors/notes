@@ -12,3 +12,6 @@ public @interface annotation_name{}
 ->another way to create custom intercpetor is by using our own annotatoin and aop and around advice fromaop
 ->first create custom annotation and annotate the method which we want to intercept
 ->and bby using aop and @annotaion write a pointcut and write code inside the around
+
+in video2 -> diff between filters vs interceptors , and ordering of an interceptors filter implementation using code
+->
