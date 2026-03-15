@@ -2,7 +2,14 @@ v1 -> about jdbc uses , reducing boiler plate codes by using jdbc ,
 methods in jdbc template like inset , update , set , update and connection h2(hikari data source)
 
 v2 -> basic update , get , post connections and about enttiy manager , persistance context
-->more aboue jpa wrapper class of entity manager  and entity life cylce
+->more about jpa wrapper class of entity manager  and entity life cylce
 
 v3 -> about persistence context , one request , and first level caching beacuse of persistence context
 
+v4 - >second level caching , about 3 dependencies , @cache property on poop
+and four type of strategies , (READ_ONLY ,WRITE_ONLY , NOnSTRICT_READ_WRITE , TRANSACTIONAL0 difference)
+
+v5 -> @table (name , unique constrains , indexes , schema ) , @coloumn )name , unique , nullable , length)(default)
+@id (primary key marker) , creating a composite key (implementing serializable)(code in docs)
+@Genereate value(Identity (auto-increment field , used by us) , sequence(in docs , helps in caching , used in companies) ,
+                  Table (a new table is created to maintain sequence)
