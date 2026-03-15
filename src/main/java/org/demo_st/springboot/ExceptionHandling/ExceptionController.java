@@ -12,7 +12,7 @@ import java.util.Date;
 @RequestMapping("/exception")
 public class ExceptionController {
 
-    @GetMapping("/try")
+    @GetMapping("/try") //trying custom thing
     public ResponseEntity<?> exceptiontry(){
         try{
             //your busieness logic here
@@ -27,5 +27,12 @@ public class ExceptionController {
             ErrorMag errorMag = new ErrorMag(new Date() , "bad request controlled by spring" , 500);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMag);
         }
+    }
+
+    //trying first defualt resolver (in ExceptionHandlerResolver)
+
+    @GetMapping("/try-response") // trying second default resolver
+    public ResponseEntity<?> exceptiontryresponse(){
+        throw new responsestatusexceptionResolver(HttpStatus.BAD_REQUEST , "bad request or user id missing");
     }
 }
