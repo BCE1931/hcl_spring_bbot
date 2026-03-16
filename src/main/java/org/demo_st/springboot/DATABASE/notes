@@ -20,4 +20,7 @@ v6 -> one to one(unidirectional) , cascadetypes(persist (create) , merge(update)
                                    Fetchtype (eager(default) automatically loads child , lazy(when required))
                                    keep fetch_type as default else change it and create a dtos to map the output
 
-    ->one to one birectional
+    ->one to one birectional(owner side(holds the pk and fk) , inverse side(holds only pk))
+                             (infinite reccusrion issue , solve this by using @jsonmanagedreference(on parent class)
+                             @jsonBackReferesnce(in child or inverse side class)
+
