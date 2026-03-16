@@ -13,3 +13,11 @@ v5 -> @table (name , unique constrains , indexes , schema ) , @coloumn )name , u
 @id (primary key marker) , creating a composite key (implementing serializable)(code in docs)
 @Genereate value(Identity (auto-increment field , used by us) , sequence(in docs , helps in caching , used in companies) ,
                   Table (a new table is created to maintain sequence)
+
+v6 -> one to one(unidirectional) , cascadetypes(persist (create) , merge(update) , remove(delete) ,
+                                                refresh(to bypass persistance context (first level caching)
+                                                All(persist + merge + remove + refresh + detach)
+                                   Fetchtype (eager(default) automatically loads child , lazy(when required))
+                                   keep fetch_type as default else change it and create a dtos to map the output
+
+    ->one to one birectional
