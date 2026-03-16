@@ -25,9 +25,9 @@ public class Address {
     private String country;
 
     //one to one bidirectionsla
-    @OneToOne(mappedBy = "address")
+    @OneToOne(mappedBy = "address" , cascade = CascadeType.ALL)
     @JsonBackReference //to solve inverse problem infinite
     //in this class or inverse side no need of join column because table strutre is same for
     //both unidirectional and bidirectional one to one mapping
-    private User user;
+    private UserMappping userMappping;
 }

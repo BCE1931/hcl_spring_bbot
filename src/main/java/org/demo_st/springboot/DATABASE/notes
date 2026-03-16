@@ -24,3 +24,5 @@ v6 -> one to one(unidirectional) , cascadetypes(persist (create) , merge(update)
                              (infinite reccusrion issue , solve this by using @jsonmanagedreference(on parent class)
                              @jsonBackReferesnce(in child or inverse side class)
 
+v7 -> one to many(unidirectoinal) (by default it creates new table , by using joincoloumn we can reduce this and fk created in child table)
+      one to many (bidirectional) (here owning side is a child class which ahs a foreign key and inverse side is a child class)
