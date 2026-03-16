@@ -1,12 +1,11 @@
 package org.demo_st.springboot.DATABASE.One_to_many;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -23,4 +22,8 @@ public class OrderMapping {
     private String address;
 
     private int amount;
+
+    @ManyToOne
+    @JoinColumn(name = "user_fk" , referencedColumnName = "id") //decides owning side
+    private UserMapping_onetomany  userMappingOnetomany;
 }

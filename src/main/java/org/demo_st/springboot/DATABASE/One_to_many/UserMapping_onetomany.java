@@ -25,7 +25,8 @@ public class UserMapping_onetomany {
     private String  email;
     private String  mobile;
 
-    @OneToMany(cascade =  CascadeType.ALL)
-    @JoinColumn(name = "user_id_fk" , referencedColumnName = "id")//creates fk in child table
+    @OneToMany(cascade =  CascadeType.ALL , mappedBy = "userMappingOnetomany")
+//    @JoinColumn(name = "user_id_fk" , referencedColumnName = "id")//creates fk in child table
+    @JsonManagedReference
     private List<OrderMapping> orderMappingList;
 }
